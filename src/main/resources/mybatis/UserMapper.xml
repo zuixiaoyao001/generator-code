@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.drawnblue.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.drawnblue.entity.User">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="loginCode" jdbcType="VARCHAR" property="logincode" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="password2" jdbcType="VARCHAR" property="password2" />
+    <result column="userName" jdbcType="VARCHAR" property="username" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="cardType" jdbcType="VARCHAR" property="cardtype" />
+    <result column="cardTypeName" jdbcType="VARCHAR" property="cardtypename" />
+    <result column="idCard" jdbcType="VARCHAR" property="idcard" />
+    <result column="country" jdbcType="VARCHAR" property="country" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="userAddress" jdbcType="VARCHAR" property="useraddress" />
+    <result column="postCode" jdbcType="VARCHAR" property="postcode" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="referId" jdbcType="BIGINT" property="referid" />
+    <result column="referCode" jdbcType="VARCHAR" property="refercode" />
+    <result column="roleId" jdbcType="BIGINT" property="roleid" />
+    <result column="roleName" jdbcType="VARCHAR" property="rolename" />
+    <result column="userType" jdbcType="VARCHAR" property="usertype" />
+    <result column="userTypeName" jdbcType="VARCHAR" property="usertypename" />
+    <result column="isStart" jdbcType="INTEGER" property="isstart" />
+    <result column="lastUpdateTime" jdbcType="TIMESTAMP" property="lastupdatetime" />
+    <result column="lastLoginTime" jdbcType="TIMESTAMP" property="lastlogintime" />
+    <result column="bankAccount" jdbcType="VARCHAR" property="bankaccount" />
+    <result column="bankName" jdbcType="VARCHAR" property="bankname" />
+    <result column="accountHolder" jdbcType="VARCHAR" property="accountholder" />
+    <result column="idCardPicPath" jdbcType="VARCHAR" property="idcardpicpath" />
+    <result column="bankPicPath" jdbcType="VARCHAR" property="bankpicpath" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,70 @@
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <properties resource="generator/config.properties"/>
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+            <property name="caseSensitive" value="true"/>
+            <property name="lombok" value="Getter,Setter,ToString"/>
+        </plugin>
+
+        <jdbcConnection driverClass="${jdbc.driverClass}"
+                        connectionURL="${jdbc.url}"
+                        userId="${jdbc.user}"
+                        password="${jdbc.password}">
+        </jdbcConnection>
+<!--实体-->
+        <javaModelGenerator targetPackage="com.drawnblue.entity"
+                            targetProject="src/main/java"/>
+<!--mapper-->
+        <sqlMapGenerator targetPackage="mybatis"
+                         targetProject="src/main/resources"/>
+<!--mapper接口-->
+        <javaClientGenerator targetPackage="com.drawnblue.dao"
+                             targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+<!--为哪张表生成代码-->
+        <table tableName="affiche"/>
+        <table tableName="au_authority" domainObjectName="Authority"/>
+        <table tableName="au_function" domainObjectName="Function"/>
+        <table tableName="au_role" domainObjectName="Role"/>
+        <table tableName="au_user" domainObjectName="User"/>
+        <table tableName="basics_parameter" domainObjectName="BasicsParameter"/>
+        <table tableName="data_dictionary" domainObjectName="DataDictionary"/>
+        <table tableName="goods_info" domainObjectName="GoodsInfo"/>
+        <table tableName="goods_pack" domainObjectName="GoodsPack"/>
+        <table tableName="goods_pack_affiliated" domainObjectName="GoodsPackAffiliated"/>
+        <table tableName="info_annexes" domainObjectName="InfoAnnexes"/>
+        <table tableName="information"/>
+        <table tableName="inventory"/>
+        <table tableName="leave_message" domainObjectName="LeaveMessage"/>
+        <table tableName="multi_lan" domainObjectName="MultiLan"/>
+        <table tableName="order_info" domainObjectName="OrderInfo"/>
+        <table tableName="order_list" domainObjectName="OrderList"/>
+        <table tableName="reply"/>
+        <table tableName="uploadtemp"/>
+        <table tableName="user_account_201312" domainObjectName="UserAccountA"/>
+        <table tableName="user_account_201404" domainObjectName="UserAccountB"/>
+        <table tableName="user_account_log_201404" domainObjectName="UserAccountLogB"/>
+        <table tableName="user_buy" domainObjectName="UserBuy"/>
+        <table tableName="user_buy_bonus" domainObjectName="UserBuyBonus"/>
+        <table tableName="user_cash" domainObjectName="UserCash"/>
+        <table tableName="user_pair_201312" domainObjectName="UserPairA"/>
+        <table tableName="user_place" domainObjectName="UserPlace"/>
+        <table tableName="user_point" domainObjectName="UserPoint"/>
+        <table tableName="user_point_goods" domainObjectName="UserPointGoods"/>
+        <table tableName="user_recharge" domainObjectName="UserRecharge"/>
+        <table tableName="user_refer" domainObjectName="UserRefer"/>
+
+
+
+           <!-- <generatedKey column="id" sqlStatement="JDBC"/>-->
+    </context>
+</generatorConfiguration>
